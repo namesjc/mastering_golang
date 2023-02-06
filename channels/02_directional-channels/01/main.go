@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	c := make(chan int)
-	cr := make(<-chan int) //recieve from channel
-	cs := make(chan<- int) //send to channel
+	c := make(chan int)    // General channel
+	cr := make(<-chan int) // By directional: recieve only channel
+	cs := make(chan<- int) // By directional: send only channel
 
 	fmt.Println("---------")
 	fmt.Printf("c\t%T\n", c)
