@@ -1,0 +1,15 @@
+id: "51436256"
+sector: 3
+salary: 9000
+tasks:
+- feature/task312
+- feture/task314
+dailyHours:
+- 7
+- 9
+- 6
+- 8
+- 7
+languages:
+  Golang: 9.1
+  Python: 7.9

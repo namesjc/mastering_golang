@@ -30,7 +30,7 @@ func Test_map(t *testing.T) {
 			if i == 50 {
 				closed <- true
 				close(channel)
-				return
+				// return
 			}
 		}
 	}()

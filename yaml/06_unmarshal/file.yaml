@@ -1,0 +1,12 @@
+install: true
+instanceType: regular
+dirAndFiles:
+  dataSpace: /mongo_data/
+  configSpace: /config_files/mongo
+configFile:
+  port: 27017
+  host: myhost1
+  bindIP: 127.0.0.1, 192.168.0.17
+  customOptions:
+    - replicas=0
+    - ssl-keys=0

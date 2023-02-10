@@ -1,0 +1,19 @@
+companies:
+- id: "514"
+  active: true
+  people:
+  - David
+  - Fred
+  budget: 90000
+  sectors:
+    Golang: 3
+    Python: 4
+- id: "640"
+  active: false
+  people:
+  - Alex
+  - Paul
+  budget: 90000
+  sectors:
+    C: 5
+    Crystal: 2
