@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/tls"
 	"crypto/x509"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"math/rand"
@@ -80,10 +81,22 @@ func main() {
 		log.Fatalf("Error consuming message: %v", err)
 	}
 
-	// Process message
-	for msg := range msgs {
-		log.Printf("Received message: %s", msg.Body)
-	}
+	// Process message option one
+	// for msg := range msgs {
+	// 	log.Printf("Received message: %s", msg.Body)
+	// }
+
+	// Process message option two
+	forever := make(chan bool)
+
+	go func() {
+		for d := range msgs {
+			log.Printf("Received a message: %s", d.Body)
+		}
+	}()
+
+	fmt.Println("Waiting for messages...")
+	<-forever
 
 }
 
